@@ -4,7 +4,7 @@
   "description": "Interactive Travel Guide Website",
   "main": "index.js",
   "scripts": {
-    "build": "npx.cmd tailwindcss -i ./css/input.css -o ./css/style.css",
+    "build": "tailwindcss -i ./css/input.css -o ./css/style.css",
     "watch": "npx.cmd tailwindcss -i ./css/input.css -o ./css/style.css --watch"
   },
   "keywords": [],
