@@ -1,0 +1,137 @@
+[
+    {
+        "id": "paris",
+        "name": "Paris",
+        "country": "France",
+        "category": "City",
+        "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=2073&auto=format&fit=crop",
+        "price": "$1,200",
+        "rating": 4.8
+    },
+    {
+        "id": "bali",
+        "name": "Bali",
+        "country": "Indonesia",
+        "category": "Beach",
+        "image": "https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=2038&auto=format&fit=crop",
+        "price": "$800",
+        "rating": 4.9
+    },
+    {
+        "id": "kyoto",
+        "name": "Kyoto",
+        "country": "Japan",
+        "category": "Culture",
+        "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?q=80&w=2070&auto=format&fit=crop",
+        "price": "$1,500",
+        "rating": 4.7
+    },
+    {
+        "id": "swiss",
+        "name": "Swiss Alps",
+        "country": "Switzerland",
+        "category": "Mountain",
+        "image": "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=2070&auto=format&fit=crop",
+        "price": "$2,000",
+        "rating": 4.9
+    },
+    {
+        "id": "nyc",
+        "name": "New York City",
+        "country": "USA",
+        "category": "City",
+        "image": "https://images.unsplash.com/photo-1496442226666-8d4a0e62e6e9?q=80&w=2070&auto=format&fit=crop",
+        "price": "$1,800",
+        "rating": 4.6
+    },
+    {
+        "id": "phuket",
+        "name": "Phuket",
+        "country": "Thailand",
+        "category": "Beach",
+        "image": "https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?q=80&w=2001&auto=format&fit=crop",
+        "price": "$700",
+        "rating": 4.5
+    },
+    {
+        "id": "santorini",
+        "name": "Santorini",
+        "country": "Greece",
+        "category": "Beach",
+        "image": "https://images.unsplash.com/photo-1613395877344-13d4c79e4df1?q=80&w=2070&auto=format&fit=crop",
+        "price": "$1,600",
+        "rating": 4.8
+    },
+    {
+        "id": "machu",
+        "name": "Machu Picchu",
+        "country": "Peru",
+        "category": "Mountain",
+        "image": "https://images.unsplash.com/photo-1587595431973-160d0d94add1?q=80&w=2076&auto=format&fit=crop",
+        "price": "$1,400",
+        "rating": 4.9
+    },
+    {
+        "id": "tokyo",
+        "name": "Tokyo",
+        "country": "Japan",
+        "category": "City",
+        "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=1994&auto=format&fit=crop",
+        "price": "$1,900",
+        "rating": 4.8
+    },
+    {
+        "id": "london",
+        "name": "London",
+        "country": "UK",
+        "category": "City",
+        "image": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=2070&auto=format&fit=crop",
+        "price": "$1,300",
+        "rating": 4.7
+    },
+    {
+        "id": "rome",
+        "name": "Rome",
+        "country": "Italy",
+        "category": "History",
+        "image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?q=80&w=1996&auto=format&fit=crop",
+        "price": "$1,450",
+        "rating": 4.8
+    },
+    {
+        "id": "dubai",
+        "name": "Dubai",
+        "country": "UAE",
+        "category": "Luxury",
+        "image": "https://images.unsplash.com/photo-1512453979798-5ea932a23518?q=80&w=2074&auto=format&fit=crop",
+        "price": "$2,500",
+        "rating": 4.9
+    },
+    {
+        "id": "sydney",
+        "name": "Sydney",
+        "country": "Australia",
+        "category": "City",
+        "image": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=2070&auto=format&fit=crop",
+        "price": "$1,950",
+        "rating": 4.8
+    },
+    {
+        "id": "maldives",
+        "name": "Maldives",
+        "country": "Maldives",
+        "category": "Beach",
+        "image": "https://images.unsplash.com/photo-1514282401047-d77a711ef62e?q=80&w=2072&auto=format&fit=crop",
+        "price": "$3,000",
+        "rating": 5.0
+    },
+    {
+        "id": "barcelona",
+        "name": "Barcelona",
+        "country": "Spain",
+        "category": "Culture",
+        "image": "https://images.unsplash.com/photo-1583422409516-2895a77efded?q=80&w=2070&auto=format&fit=crop",
+        "price": "$1,250",
+        "rating": 4.7
+    }
+]

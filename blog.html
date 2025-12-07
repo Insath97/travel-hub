@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog - Smart Travel Hub</title>
+    <link href="./css/style.css" rel="stylesheet">
+    <!-- Tailwind CSS (CDN for immediate reliability) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0EA5E9',
+                        accent: '#2DD4BF',
+                        contrast: '#1E293B',
+                        background: '#F1F5F9',
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F1F5F9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-40 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="text-2xl font-bold text-white flex items-center gap-2 group">
+                <i class="fa-solid fa-plane-departure transform group-hover:-rotate-12 transition duration-300"></i>
+                <span>TravelHub</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html"
+                    class="text-white font-medium hover:text-accent transition border-b-2 border-transparent hover:border-accent pb-1">Home</a>
+                <a href="destinations.html"
+                    class="text-white font-medium hover:text-accent transition border-b-2 border-transparent hover:border-accent pb-1">Destinations</a>
+                <a href="guide.html"
+                    class="text-white font-medium hover:text-accent transition border-b-2 border-transparent hover:border-accent pb-1">Guide</a>
+                <a href="gallery.html"
+                    class="text-white font-medium hover:text-accent transition border-b-2 border-transparent hover:border-accent pb-1">Gallery</a>
+                <a href="blog.html"
+                    class="text-white font-medium hover:text-accent transition border-b-2 border-accent pb-1 active-nav">Blog</a>
+                <a href="contact.html"
+                    class="text-white font-medium hover:text-accent transition border-b-2 border-transparent hover:border-accent pb-1">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white text-2xl focus:outline-none" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div class="md:hidden hidden bg-contrast/95 backdrop-blur-md absolute w-full left-0 top-full shadow-xl border-t border-white/10"
+            id="mobile-menu">
+            <div class="flex flex-col p-6 space-y-4">
+                <a href="index.html" class="text-white font-medium hover:text-accent transition block">Home</a>
+                <a href="destinations.html"
+                    class="text-white font-medium hover:text-accent transition block">Destinations</a>
+                <a href="guide.html" class="text-white font-medium hover:text-accent transition block">Guide</a>
+                <a href="gallery.html" class="text-white font-medium hover:text-accent transition block">Gallery</a>
+                <a href="blog.html" class="text-white font-medium hover:text-accent transition block">Blog</a>
+                <a href="contact.html" class="text-white font-medium hover:text-accent transition block">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-cover bg-center h-[50vh] flex items-center justify-center text-white"
+        style="background-image: url('https://images.unsplash.com/photo-1501504905252-473c47e087f8?q=80&w=1974&auto=format&fit=crop');">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative z-10 text-center" data-aos="fade-down">
+            <h1 class="text-5xl font-bold mb-4">Travel Journal</h1>
+            <p class="text-xl font-light">Insights, tips, and stories from around the globe.</p>
+        </div>
+    </header>
+
+    <!-- Blog Section -->
+    <section class="container mx-auto px-6 py-12">
+        <!-- Advanced Filter -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
+            <button
+                class="filter-btn active bg-primary text-white px-6 py-2 rounded-full font-semibold shadow-md transition transform hover:scale-105"
+                data-filter="all">All Posts</button>
+            <button
+                class="filter-btn bg-white text-gray-600 hover:bg-primary hover:text-white px-6 py-2 rounded-full font-semibold shadow-md transition transform hover:scale-105"
+                data-filter="Destinations">Destinations</button>
+            <button
+                class="filter-btn bg-white text-gray-600 hover:bg-primary hover:text-white px-6 py-2 rounded-full font-semibold shadow-md transition transform hover:scale-105"
+                data-filter="Tips">Tips</button>
+            <button
+                class="filter-btn bg-white text-gray-600 hover:bg-primary hover:text-white px-6 py-2 rounded-full font-semibold shadow-md transition transform hover:scale-105"
+                data-filter="News">News</button>
+            <button
+                class="filter-btn bg-white text-gray-600 hover:bg-primary hover:text-white px-6 py-2 rounded-full font-semibold shadow-md transition transform hover:scale-105"
+                data-filter="Budget">Budget</button>
+            <button
+                class="filter-btn bg-white text-gray-600 hover:bg-primary hover:text-white px-6 py-2 rounded-full font-semibold shadow-md transition transform hover:scale-105"
+                data-filter="Gear">Gear</button>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="max-w-xl mx-auto mb-12 relative" data-aos="fade-up" data-aos-delay="100">
+            <input type="text" id="search-input" placeholder="Search articles..."
+                class="w-full pl-12 pr-4 py-3 rounded-full border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition shadow-sm">
+            <i
+                class="fa-solid fa-magnifying-glass absolute left-5 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+        </div>
+
+        <!-- Grid -->
+        <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Items injected via AJAX -->
+            <div class="col-span-full text-center py-20">
+                <i class="fa-solid fa-spinner fa-spin text-4xl text-primary"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Article Modal -->
+    <div id="blog-modal"
+        class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+        <!-- Overlay to close -->
+        <div class="absolute inset-0" id="close-modal-overlay"></div>
+
+        <div
+            class="bg-white rounded-2xl max-w-6xl w-full relative shadow-2xl animate-fade-in-up max-h-[90vh] overflow-y-auto custom-scrollbar">
+            <!-- Close Button -->
+            <button id="close-modal-btn"
+                class="fixed top-6 right-6 md:top-8 md:right-8 bg-gray-100 rounded-full w-10 h-10 flex items-center justify-center hover:bg-red-500 hover:text-white transition z-50 shadow-md">
+                <i class="fa-solid fa-times text-lg"></i>
+            </button>
+
+            <!-- Modal Content -->
+            <div id="modal-content" class="p-8 md:p-12">
+                <!-- Injected via JS -->
+                <div class="flex flex-col items-center justify-center h-64 text-gray-400">
+                    <i class="fa-solid fa-spinner fa-spin text-3xl mb-4"></i>
+                    <p>Loading...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-contrast text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-1">
+                    <a href="index.html" class="text-3xl font-bold flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-plane-departure text-primary"></i> TravelHub
+                    </a>
+                    <p class="text-gray-400 leading-relaxed">
+                        Discover the world's most breathtaking destinations with our smart travel companion. Adventure
+                        awaits.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6 border-l-4 border-primary pl-3">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="index.html" class="hover:text-accent transition flex items-center gap-2"><i
+                                    class="fa-solid fa-chevron-right text-xs"></i> Home</a></li>
+                        <li><a href="destinations.html" class="hover:text-accent transition flex items-center gap-2"><i
+                                    class="fa-solid fa-chevron-right text-xs"></i> Destinations</a></li>
+                        <li><a href="guide.html" class="hover:text-accent transition flex items-center gap-2"><i
+                                    class="fa-solid fa-chevron-right text-xs"></i> Travel Guide</a></li>
+                        <li><a href="gallery.html" class="hover:text-accent transition flex items-center gap-2"><i
+                                    class="fa-solid fa-chevron-right text-xs"></i> Gallery</a></li>
+                        <li><a href="blog.html" class="hover:text-accent transition flex items-center gap-2"><i
+                                    class="fa-solid fa-chevron-right text-xs"></i> Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6 border-l-4 border-accent pl-3">Contact Us</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-primary"></i>
+                            <span>123 Adventure Way, New York, NY 10012, USA</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-primary"></i>
+                            <span>hello@travelhub.com</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-primary"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter (Static) -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6 border-l-4 border-pink-500 pl-3">Newsletter</h4>
+                    <p class="text-gray-400 mb-4 text-sm">Subscribe to get special offers and travel inspiration.</p>
+                    <form onsubmit="event.preventDefault(); alert('Subscribed!');" class="flex flex-col gap-3">
+                        <input type="email" placeholder="Your email address"
+                            class="bg-white/10 border border-white/20 rounded px-4 py-2 text-white focus:outline-none focus:border-primary transition">
+                        <button type="submit"
+                            class="bg-primary text-white font-bold py-2 rounded hover:bg-sky-600 transition">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">&copy; 2024 Smart Travel Hub. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i
+                            class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
+</body>
+
+</html>

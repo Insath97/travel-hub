@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Smart Travel Hub</title>
+    <link href="./css/style.css" rel="stylesheet">
+    <!-- Tailwind CSS (CDN for immediate reliability) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0EA5E9',
+                        accent: '#2DD4BF',
+                        contrast: '#1E293B',
+                        background: '#F1F5F9',
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F1F5F9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-40 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="text-2xl font-bold text-white flex items-center gap-2 group">
+                <i class="fa-solid fa-plane-departure transform group-hover:-rotate-12 transition duration-300"></i>
+                <span>TravelHub</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html"
+                    class="text-white font-medium hover:text-accent transition border-b-2 border-transparent hover:border-accent pb-1">Home</a>
+                <a href="destinations.html"
+                    class="text-white font-medium hover:text-accent transition border-b-2 border-transparent hover:border-accent pb-1">Destinations</a>
+                <a href="guide.html"
+                    class="text-white font-medium hover:text-accent transition border-b-2 border-transparent hover:border-accent pb-1">Guide</a>
+                <a href="gallery.html"
+                    class="text-white font-medium hover:text-accent transition border-b-2 border-transparent hover:border-accent pb-1">Gallery</a>
+                <a href="blog.html"
+                    class="text-white font-medium hover:text-accent transition border-b-2 border-transparent hover:border-accent pb-1">Blog</a>
+                <a href="contact.html"
+                    class="text-white font-medium hover:text-accent transition border-b-2 border-accent pb-1 active-nav">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white text-2xl focus:outline-none" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div class="md:hidden hidden bg-contrast/95 backdrop-blur-md absolute w-full left-0 top-full shadow-xl border-t border-white/10"
+            id="mobile-menu">
+            <div class="flex flex-col p-6 space-y-4">
+                <a href="index.html" class="text-white font-medium hover:text-accent transition block">Home</a>
+                <a href="destinations.html"
+                    class="text-white font-medium hover:text-accent transition block">Destinations</a>
+                <a href="guide.html" class="text-white font-medium hover:text-accent transition block">Guide</a>
+                <a href="gallery.html" class="text-white font-medium hover:text-accent transition block">Gallery</a>
+                <a href="blog.html" class="text-white font-medium hover:text-accent transition block">Blog</a>
+                <a href="contact.html" class="text-white font-medium hover:text-accent transition block">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-cover bg-center h-[50vh] flex items-center justify-center text-white"
+        style="background-image: url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=2070&auto=format&fit=crop');">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative z-10" data-aos="fade-down">
+            <h1 class="text-5xl font-bold mb-4">Get in Touch</h1>
+            <p class="text-xl font-light">We'd love to hear about your next adventure.</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+        <!-- Contact Form -->
+        <div class="bg-white p-8 rounded-2xl shadow-xl" data-aos="fade-right">
+            <h2 class="text-3xl font-bold mb-6 text-primary">Send Message</h2>
+            <form id="contact-form" class="space-y-6">
+                <div>
+                    <label class="block text-gray-700 font-bold mb-2">Name</label>
+                    <input type="text" id="name" name="name"
+                        class="w-full px-4 py-3 rounded-lg border focus:outline-none focus:border-primary transition"
+                        placeholder="Your Name" required>
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-bold mb-2">Email</label>
+                    <input type="email" id="email" name="email"
+                        class="w-full px-4 py-3 rounded-lg border focus:outline-none focus:border-primary transition"
+                        placeholder="Email Address" required>
+                </div>
+                <div>
+                    <label class="block text-gray-700 font-bold mb-2">Message</label>
+                    <textarea id="message" name="message" rows="5"
+                        class="w-full px-4 py-3 rounded-lg border focus:outline-none focus:border-primary transition"
+                        placeholder="How can we help?" required></textarea>
+                </div>
+                <button type="submit"
+                    class="w-full bg-primary text-white font-bold py-3 rounded-lg hover:bg-sky-600 transition transform hover:scale-105">
+                    Send Message <i class="fa-solid fa-paper-plane ml-2"></i>
+                </button>
+                <div id="form-status" class="hidden text-center font-bold mt-4"></div>
+            </form>
+        </div>
+
+        <!-- Info & Map -->
+        <div class="space-y-8" data-aos="fade-left">
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div
+                    class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center hover:bg-gray-50 transition">
+                    <div class="bg-blue-100 p-4 rounded-full mb-4">
+                        <i class="fa-solid fa-location-dot text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="font-bold text-lg">Visit Us</h3>
+                    <p class="text-gray-500 text-sm">123 Travel Lane, New York, USA</p>
+                </div>
+                <div
+                    class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center hover:bg-gray-50 transition">
+                    <div class="bg-green-100 p-4 rounded-full mb-4">
+                        <i class="fa-solid fa-phone text-2xl text-accent"></i>
+                    </div>
+                    <h3 class="font-bold text-lg">Call Us</h3>
+                    <p class="text-gray-500 text-sm">+1 (555) 123-4567</p>
+                </div>
+            </div>
+
+            <!-- Map Embed -->
+            <div class="rounded-2xl overflow-hidden shadow-xl h-80 border-4 border-white">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869402!2d-74.11976373946229!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2suk!4v1645000000000!5m2!1sen!2suk"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <!-- FAQ Dropdowns -->
+            <div class="bg-white p-6 rounded-xl shadow-md">
+                <h3 class="text-xl font-bold mb-4">Frequently Asked Questions</h3>
+                <div class="space-y-3">
+                    <details class="group">
+                        <summary
+                            class="flex justify-between items-center font-medium cursor-pointer list-none text-contrast">
+                            <span>How do I book a trip?</span>
+                            <span class="transition group-open:rotate-180">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </summary>
+                        <p class="text-gray-600 mt-3 group-open:animate-fadeIn">
+                            Simply navigate to the destinations page, select your desired location, and click "Book
+                            Now".
+                        </p>
+                    </details>
+                    <div class="border-t my-2"></div>
+                    <details class="group">
+                        <summary
+                            class="flex justify-between items-center font-medium cursor-pointer list-none text-contrast">
+                            <span>Is travel insurance included?</span>
+                            <span class="transition group-open:rotate-180">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </summary>
+                        <p class="text-gray-600 mt-3 group-open:animate-fadeIn">
+                            Basic insurance is included in our premium packages, but we recommend comprehensive
+                            coverage.
+                        </p>
+                    </details>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-contrast text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-1">
+                    <a href="index.html" class="text-3xl font-bold flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-plane-departure text-primary"></i> TravelHub
+                    </a>
+                    <p class="text-gray-400 leading-relaxed">
+                        Discover the world's most breathtaking destinations with our smart travel companion. Adventure
+                        awaits.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6 border-l-4 border-primary pl-3">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="index.html" class="hover:text-accent transition flex items-center gap-2"><i
+                                    class="fa-solid fa-chevron-right text-xs"></i> Home</a></li>
+                        <li><a href="destinations.html" class="hover:text-accent transition flex items-center gap-2"><i
+                                    class="fa-solid fa-chevron-right text-xs"></i> Destinations</a></li>
+                        <li><a href="guide.html" class="hover:text-accent transition flex items-center gap-2"><i
+                                    class="fa-solid fa-chevron-right text-xs"></i> Travel Guide</a></li>
+                        <li><a href="gallery.html" class="hover:text-accent transition flex items-center gap-2"><i
+                                    class="fa-solid fa-chevron-right text-xs"></i> Gallery</a></li>
+                        <li><a href="blog.html" class="hover:text-accent transition flex items-center gap-2"><i
+                                    class="fa-solid fa-chevron-right text-xs"></i> Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6 border-l-4 border-accent pl-3">Contact Us</h4>
+                    <ul class="space-y-4 text-gray-400">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-primary"></i>
+                            <span>123 Adventure Way, New York, NY 10012, USA</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-primary"></i>
+                            <span>hello@travelhub.com</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-primary"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter (Static) -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6 border-l-4 border-pink-500 pl-3">Newsletter</h4>
+                    <p class="text-gray-400 mb-4 text-sm">Subscribe to get special offers and travel inspiration.</p>
+                    <form onsubmit="event.preventDefault(); alert('Subscribed!');" class="flex flex-col gap-3">
+                        <input type="email" placeholder="Your email address"
+                            class="bg-white/10 border border-white/20 rounded px-4 py-2 text-white focus:outline-none focus:border-primary transition">
+                        <button type="submit"
+                            class="bg-primary text-white font-bold py-2 rounded hover:bg-sky-600 transition">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">&copy; 2024 Smart Travel Hub. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i
+                            class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+
+</html>

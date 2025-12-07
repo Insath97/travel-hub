@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "title": "Top 10 Hidden Gems in Southeast Asia",
+        "category": "Destinations",
+        "date": "2024-10-25",
+        "snippet": "Discover the untouched beauty of islands that haven't been overrun by tourists yet..."
+    },
+    {
+        "id": 2,
+        "title": "New Visa Policies for Digital Nomads",
+        "category": "News",
+        "date": "2024-10-22",
+        "snippet": "Several countries are launching new visa programs to attract remote workers..."
+    },
+    {
+        "id": 3,
+        "title": "Sustainable Travel: How to Reduce Your Footprint",
+        "category": "Tips",
+        "date": "2024-10-20",
+        "snippet": "Eco-friendly travel is on the rise. Here are simple tips to travel more responsibly..."
+    },
+    {
+        "id": 4,
+        "title": "Best Street Food Categories in 2024",
+        "category": "Destinations",
+        "date": "2024-10-18",
+        "snippet": "From Bangkok to Mexico City, here are the absolute must-try street foods this year."
+    },
+    {
+        "id": 5,
+        "title": "Airline Baggage Fees: What Changed?",
+        "category": "News",
+        "date": "2024-10-15",
+        "snippet": "A comprehensive guide to the new baggage policies of major international airlines."
+    },
+    {
+        "id": 6,
+        "title": "Solo Travel: Safety Tips for Beginners",
+        "category": "Tips",
+        "date": "2024-10-12",
+        "snippet": "Embarking on your first solo trip? Read these essential safety guidelines first."
+    },
+    {
+        "id": 7,
+        "title": "The Rise of Train Travel in Europe",
+        "category": "News",
+        "date": "2024-10-10",
+        "snippet": "Why more travelers are ditching flights for scenic train routes across Europe."
+    },
+    {
+        "id": 8,
+        "title": "Photography Gear for Light Packers",
+        "category": "Gear",
+        "date": "2024-10-08",
+        "snippet": "How to capture stunning travel photos without carrying heavy equipment."
+    },
+    {
+        "id": 9,
+        "title": "Cultural Etiquette: Do's and Don'ts in Japan",
+        "category": "Tips",
+        "date": "2024-10-05",
+        "snippet": "Avoid embarrassment by learning these simple cultural rules before visiting Japan."
+    },
+    {
+        "id": 10,
+        "title": "Winter Travel: Best Ski Resorts",
+        "category": "Destinations",
+        "date": "2024-10-02",
+        "snippet": "Planning a winter getaway? Here are the top rated ski resorts for 2024."
+    },
+    {
+        "id": 11,
+        "title": "Budget Travel Hacks for Students",
+        "category": "Budget",
+        "date": "2024-09-30",
+        "snippet": "See the world without breaking the bank with these student-friendly travel hacks."
+    },
+    {
+        "id": 12,
+        "title": "Luxury for Less: Off-Season Deals",
+        "category": "Budget",
+        "date": "2024-09-28",
+        "snippet": "How to book 5-star experiences at 3-star prices by traveling during shoulder seasons."
+    }
+]

@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .glass {
+    @apply bg-white/30 backdrop-blur-lg border border-white/20 shadow-lg;
+  }
+
+  .navbar-scrolled {
+    @apply bg-contrast/90 shadow-lg !important;
+  }
+}
